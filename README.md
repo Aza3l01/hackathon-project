@@ -17,8 +17,8 @@ A web application that uses a Large Language Model (LLM) to analyze resumes, ext
 ### Setup and Installation
 1. Clone the repository:
 
-`git clone <your-repository-url>`
-`cd <your-repository-name>`
+git clone https://github.com/Aza3l01/hackathon-project
+cd hackathon-project
 
 2. Set up your API Key:
 
@@ -62,32 +62,30 @@ Prerequisites:
     Node.js & npm
 
 Terminal 1: Start the Backend
-Bash
 
-### Navigate to the backend folder
+Navigate to the backend folder
 cd backend
 
-### Create and activate a virtual environment
+Create and activate a virtual environment
 python -m venv venv
 source venv/bin/activate  # On macOS/Linux
-### .\venv\Scripts\activate  # On Windows
+.\venv\Scripts\activate  # On Windows
 
-### Install dependencies
+Install dependencies
 pip install -r requirements.txt
 
-### Run the server
+Run the server
 uvicorn main:app --reload
 
 Terminal 2: Start the Frontend
-Bash
 
-### Navigate to the frontend folder
+Navigate to the frontend folder
 cd frontend
 
-### Install dependencies
+Install dependencies
 npm install
 
-### Run the development server
+Run the development server
 npm run dev
 
 Open your browser and go to http://localhost:3001 to use the application.
