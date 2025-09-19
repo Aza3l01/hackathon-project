@@ -36,9 +36,9 @@ Set up the OpenAI API Key:
 1. Create a file named `.env` inside the `backend` directory.  
 2. Add your API key to this file:  
 
-   ```env
-   OPENAI_API_KEY="sk-..."
-   ```
+```env
+OPENAI_API_KEY="sk-..."
+```
 
 ---
 
@@ -56,8 +56,7 @@ Build and run the entire application with a single command:
 docker-compose up --build
 ```
 
-Access the application at:  
-👉 [http://localhost:3001](http://localhost:3001)
+Access the application at:  [http://localhost:3001](http://localhost:3001)
 
 To stop the application:
 
@@ -101,5 +100,4 @@ npm install
 npm run dev
 ```
 
-Access the application at:  
-👉 [http://localhost:3001](http://localhost:3001)
+Access the application at:  [http://localhost:3001](http://localhost:3001)
