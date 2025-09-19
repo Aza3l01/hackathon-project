@@ -1,91 +1,105 @@
-LLM-Powered Job Portal
+# LLM-Powered Job Portal
 
 A web application that uses a Large Language Model (LLM) to analyze resumes, extract skills, and match candidates with suitable job listings.
 
-Tech Stack
+## Tech Stack
 
-    Frontend: Next.js (React), Tailwind CSS
+- **Frontend:** Next.js (React), Tailwind CSS  
+- **Backend:** FastAPI (Python), SQLAlchemy  
+- **Database:** SQLite  
+- **LLM:** OpenAI API  
+- **Containerization:** Docker, Docker Compose  
 
-    Backend: FastAPI (Python), SQLAlchemy
+---
 
-    Database: SQLite
+## Getting Started
 
-    LLM: OpenAI API
+### Prerequisites
 
-    Containerization: Docker, Docker Compose
+- Python **3.11+**  
+- Node.js & npm  
+- Docker & Docker Compose  
 
-Getting Started
+---
 
-Prerequisites
+### Initial Setup
 
-    Python 3.11+
+Clone the repository:
 
-    Node.js & npm
+```bash
+git clone https://github.com/Aza3l01/hackathon-project
+cd hackathon-project
+```
 
-    Docker & Docker Compose
+Set up the OpenAI API Key:
 
-Initial Setup
+1. Create a file named `.env` inside the `backend` directory.  
+2. Add your API key to this file:  
 
-    Clone the repository:
+   ```env
+   OPENAI_API_KEY="sk-..."
+   ```
 
-    git clone https://github.com/Aza3l01/hackathon-project
-    cd hackathon-project
+---
 
-    Set up the OpenAI API Key:
+## Running the Application
 
-        Create a file named .env inside the backend directory.
+This project can be run using **Docker Compose** (recommended) or manually.  
 
-        Add your API key to this file:
+---
 
-        OPENAI_API_KEY="sk-..."
+### Option 1: Docker Compose (Recommended)
 
-Running the Application
+Build and run the entire application with a single command:
 
-This project can be run using Docker Compose or manually. The Docker method is recommended for a simpler setup.
+```bash
+docker-compose up --build
+```
 
-Option 1: Docker Compose (Recommended)
+Access the application at:  
+👉 [http://localhost:3001](http://localhost:3001)
 
-This method builds and runs the entire application with a single command.
+To stop the application:
 
-    From the project's root directory, run the build command:
-
-    docker-compose up --build
-
-    Access the application in your browser at http://localhost:3001.
-
-To stop the application, press CTRL+C in the terminal and then run:
-
+```bash
+CTRL+C
 docker-compose down
+```
 
-Option 2: Locally (Manual)
+---
 
-This method requires running the backend and frontend in two separate terminals.
+### Option 2: Run Locally (Manual)
 
-Terminal 1: Start the Backend
+Run the backend and frontend in two separate terminals.  
 
-# Navigate to the backend directory
+#### Terminal 1: Backend
+
+```bash
 cd backend
 
-# Create and activate a virtual environment
+# Create and activate virtual environment
 python -m venv venv
-source venv/bin/activate  # On macOS/Linux
-# .\venv\Scripts\activate  # On Windows
+source venv/bin/activate    # On macOS/Linux
+# .\venv\Scripts\activate   # On Windows
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Run the server
+# Start the backend server
 uvicorn main:app --reload
+```
 
-Terminal 2: Start the Frontend
+#### Terminal 2: Frontend
 
-# Navigate to the frontend directory
+```bash
 cd frontend
 
 # Install dependencies
 npm install
 
-# Run the development server
+# Start the frontend server
 npm run dev
+```
 
-Access the application in your browser at http://localhost:3001.
+Access the application at:  
+👉 [http://localhost:3001](http://localhost:3001)
