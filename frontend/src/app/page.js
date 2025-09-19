@@ -1,4 +1,5 @@
-"use client"; // necessary for using hooks in App Router pages
+"use client";
+
 import { useState } from "react";
 
 export default function Home() {
